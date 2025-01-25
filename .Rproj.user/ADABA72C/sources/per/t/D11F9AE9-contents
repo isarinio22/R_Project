@@ -1,0 +1,27 @@
+####libraries and instalations ----
+
+install.packages("tidyverse")
+library(tidyverse)
+df_full <- read_csv("boxing_matches.csv")
+set.seed(123)
+
+#### short explanation on the dataset and why i chose it ----
+
+# age_A / age_B: The age of Boxer A / Boxer B at the time of the match.
+# height_A / height_B: The height of Boxer A / Boxer B, likely measured in centimeters or inches.
+# reach_A / reach_B: The reach of Boxer A / Boxer B, typically the distance from fingertip to fingertip when arms are extended.
+# stance_A / stance_B: The fighting stance of Boxer A / Boxer B (e.g., orthodox, southpaw).
+# weight_A / weight_B: The weight of Boxer A / Boxer B at the time of the match, likely measured in kilograms or pounds.
+# won_A / won_B: The total number of matches won by Boxer A / Boxer B before this fight.
+# lost_A / lost_B: The total number of matches lost by Boxer A / Boxer B before this fight.
+# drawn_A / drawn_B: The total number of matches that ended in a draw for Boxer A / Boxer B before this fight.
+# kos_A / kos_B: The number of matches Boxer A / Boxer B has won by knockout before this fight.
+# result: The result of the match, indicating which boxer won (e.g., "A", "B", or "draw").
+# decision: The type of decision that determined the result (e.g., "KO", "TKO", "unanimous decision").
+# judge_A / judge_B: The score given to Boxer A / Boxer B by the Judge, see we have 3 of them.
+
+
+
+df_full <- read_csv("boxing_matches.csv")
+df <- df_full %>% sample_n(10000)
+
